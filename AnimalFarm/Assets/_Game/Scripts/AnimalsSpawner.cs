@@ -2,32 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AnimalsSpawner : MonoBehaviour {
-    
     public List<Transform> spawnPoints = new List<Transform>();
-    
+
     public Animal animalPrefab;
     public float spawnInterval = 5f;
 
 
     private void Start() {
-        StartCoroutine(SpawnAnimals());
+        InvokeRepeating(nameof(SpawnAnimals), 0f, spawnInterval);
     }
-    
-    private IEnumerator SpawnAnimals() {
-        while (true) {
-            yield return new WaitForSeconds(spawnInterval);
-            int randomIndex = UnityEngine.Random.Range(0, spawnPoints.Count);
-            Transform spawnPoint = spawnPoints[randomIndex];
-            Instantiate(animalPrefab, spawnPoint.position, Quaternion.identity);
-        }
-    }
-    
-    private void OnTriggerEnter2D(Collider2D col) {
-        if (col.CompareTag("Player")) {
-            print("GameLost");
-            
-        }
+
+    private void SpawnAnimals() {
+        var randomIndex = Random.Range(0, spawnPoints.Count);
+        Instantiate(animalPrefab, spawnPoints[randomIndex].position, Quaternion.identity);
     }
 }
