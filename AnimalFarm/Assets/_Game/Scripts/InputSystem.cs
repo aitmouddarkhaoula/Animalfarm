@@ -37,10 +37,10 @@ public class InputSystem : MonoBehaviour
         {
             transform.position = new Vector3(pos.x, -2, 0f);
         }
-        else
-        {
-            transform.position = pos;
-        }
+        //else
+        //{
+        //    transform.position = pos;
+        //}
         
     }
 
@@ -58,6 +58,8 @@ public class InputSystem : MonoBehaviour
             }
             else
             {
+                reachedHome = false;
+                StartCoroutine(RedColor());
                 //GetComponent<SpriteRenderer>().color = Color.red;
                 GetComponentInParent<Animal>().WrongHome();
             }
@@ -69,6 +71,12 @@ public class InputSystem : MonoBehaviour
         //}
 
     }
-    
+    IEnumerator RedColor()
+    {
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(1f);
+        GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
 
 }

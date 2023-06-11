@@ -41,6 +41,6 @@ public class Animal : MonoBehaviour {
     }
 
     public void WrongHome() {
-        transform.DOShakePosition(1, 1);
+        transform.DOShakePosition(1, 0.4f,10);
     }
 }
