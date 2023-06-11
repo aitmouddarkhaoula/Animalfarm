@@ -11,7 +11,20 @@ public class AnimalsSpawner : MonoBehaviour {
 
 
     private void Start() {
+        GameStateSystem.OnGameStateChanged += OnGameStateChanged;
         InvokeRepeating(nameof(SpawnAnimals), 0f, spawnInterval);
+    }
+
+    private void OnGameStateChanged(GameState obj) {
+        switch (obj) {
+            case GameState.GameOver or GameState.GameWon:
+            case GameState.Paused:
+                CancelInvoke(nameof(SpawnAnimals));
+                break;
+            case GameState.Playing:
+                InvokeRepeating(nameof(SpawnAnimals), 0f, spawnInterval);
+                break;
+        }
     }
 
     private void SpawnAnimals() {
