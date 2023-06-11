@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Collections;
 
 public enum AnimalType {
     Cow,
@@ -16,7 +17,7 @@ public class Animal : MonoBehaviour {
 
     private void Start() => Init();
 
-    private void Init() {
+    public void Init() {
         // Hook up the dropdown's value change event to a method
         animalDropdown.onValueChanged.AddListener(OnAnimalDropdownValueChanged);
 
@@ -35,12 +36,34 @@ public class Animal : MonoBehaviour {
 
     public void ReachedHome(Vector3 housePos) {
         //transform.position = housePos;
+        GameStateManager.instance.score.AddScore(2);
         transform.DOMove(housePos, _duration);
         transform.DOScale(Vector3.zero, _duration);
+        StartCoroutine(Destroy());
+        IEnumerator Destroy()
+        {
+            yield return new WaitForSeconds(2f);
+            OnDestroy();
+        }
         //Destroy(gameObject);
     }
-
-    public void WrongHome() {
+    public void WrongHome()
+    {
+        GameStateManager.instance.score.RemoveScore(-2);
         transform.DOShakePosition(1, 0.4f,10);
     }
+    public void Reset()
+    {
+        Vector3 pos = transform.position;
+        transform.position = pos;
+    }
+    public void OnDestroy()
+    {
+        Destroy(gameObject);
+    }
+
+
+
+
+
 }

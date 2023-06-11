@@ -2,23 +2,23 @@
 using OknaaEXTENSIONS.CustomWrappers;
 using UnityEngine;
 
-public enum GameState {
-    Playing,
-    Paused,
-    GameWon,
-    GameOver
-}
+//public enum GameState {
+//    Playing,
+//    Paused,
+//    GameWon,
+//    GameOver
+//}
 
-public class GameStateSystem : Singleton<GameStateSystem> {
-    public static Action<GameState> OnGameStateChanged;
+//public class GameStateSystem : Singleton<GameStateSystem> {
+//    public static Action<GameState> OnGameStateChanged;
 
-    public GameState gameState;
+//    public GameState gameState;
     
     
-    public void SetGameState(GameState state) {
-        if (state == gameState) return;
+//    public void SetGameState(GameState state) {
+//        if (state == gameState) return;
         
-        gameState = state;
-        OnGameStateChanged?.Invoke(gameState);
-    }
-}
+//        gameState = state;
+//        OnGameStateChanged?.Invoke(gameState);
+//    }
+//}
