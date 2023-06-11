@@ -130,22 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1523157100, guid: 42d7ac58e0e98764789f00804ecc1e04, type: 3}
-      propertyPath: animalPrefabs.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1523157100, guid: 42d7ac58e0e98764789f00804ecc1e04, type: 3}
-      propertyPath: animalPrefabs.Array.data[2]
-      value: 
-      objectReference: {fileID: 7453692689938877814, guid: 37de9d85ae9d1c64aa78ca1f7df1953a, type: 3}
-    - target: {fileID: 8718035195308542, guid: 42d7ac58e0e98764789f00804ecc1e04, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 8718035195308542, guid: 42d7ac58e0e98764789f00804ecc1e04, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.88
-      objectReference: {fileID: 0}
     - target: {fileID: 4846755021655448092, guid: 42d7ac58e0e98764789f00804ecc1e04, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -193,18 +177,6 @@ PrefabInstance:
     - target: {fileID: 4846755021655448093, guid: 42d7ac58e0e98764789f00804ecc1e04, type: 3}
       propertyPath: m_Name
       value: Level
-      objectReference: {fileID: 0}
-    - target: {fileID: 4846755021655448093, guid: 42d7ac58e0e98764789f00804ecc1e04, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5494437696261382763, guid: 42d7ac58e0e98764789f00804ecc1e04, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 5494437696261382763, guid: 42d7ac58e0e98764789f00804ecc1e04, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.74
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42d7ac58e0e98764789f00804ecc1e04, type: 3}

@@ -12866,6 +12866,7 @@ MonoBehaviour:
   animalPrefabs:
   - {fileID: 7453692689938877814, guid: 6b98a6fb25356f043819fa15fd16d24d, type: 3}
   - {fileID: 7453692689938877814, guid: 3249a32e73dd80949a6b61b2e7273587, type: 3}
+  - {fileID: 7453692689938877814, guid: 37de9d85ae9d1c64aa78ca1f7df1953a, type: 3}
   spawnInterval: 1
 --- !u!1 &4846755021736175239
 GameObject:
@@ -14794,11 +14795,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3528603902312457557, guid: a72f72e7f5978c542b218c7524e12b29, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.03
+      value: 5.63
       objectReference: {fileID: 0}
     - target: {fileID: 3528603902312457557, guid: a72f72e7f5978c542b218c7524e12b29, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.72
+      value: 3.88
       objectReference: {fileID: 0}
     - target: {fileID: 3528603902312457557, guid: a72f72e7f5978c542b218c7524e12b29, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14852,11 +14853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 652744524134511551, guid: c4d27b28de7e4f4429c4fc107f66deb8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.55
+      value: -4.62
       objectReference: {fileID: 0}
     - target: {fileID: 652744524134511551, guid: c4d27b28de7e4f4429c4fc107f66deb8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1
+      value: 3.74
       objectReference: {fileID: 0}
     - target: {fileID: 652744524134511551, guid: c4d27b28de7e4f4429c4fc107f66deb8, type: 3}
       propertyPath: m_LocalPosition.z
