@@ -2886,7 +2886,9 @@ MonoBehaviour:
   - {fileID: 4846755022171529113}
   - {fileID: 4846755021579521530}
   - {fileID: 4846755021052407737}
-  animalPrefab: {fileID: 486368656519349099, guid: 3249a32e73dd80949a6b61b2e7273587, type: 3}
+  animalPrefabs:
+  - {fileID: 7453692689938877814, guid: 6b98a6fb25356f043819fa15fd16d24d, type: 3}
+  - {fileID: 7453692689938877814, guid: 3249a32e73dd80949a6b61b2e7273587, type: 3}
   spawnInterval: 1
 --- !u!1 &4846755021736175239
 GameObject:

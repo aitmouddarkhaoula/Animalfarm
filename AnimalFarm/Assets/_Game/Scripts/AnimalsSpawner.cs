@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using OknaaEXTENSIONS;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class AnimalsSpawner : MonoBehaviour {
     public List<Transform> spawnPoints = new List<Transform>();
+    public List<Transform> animalPrefabs = new List<Transform>();
 
-    public Animal animalPrefab;
     public float spawnInterval = 5f;
 
 
@@ -17,6 +18,6 @@ public class AnimalsSpawner : MonoBehaviour {
 
     private void SpawnAnimals() {
         var randomIndex = Random.Range(0, spawnPoints.Count);
-        Instantiate(animalPrefab, spawnPoints[randomIndex].position, Quaternion.identity);
+        Instantiate(animalPrefabs.Random(), spawnPoints[randomIndex].position, Quaternion.identity);
     }
 }
