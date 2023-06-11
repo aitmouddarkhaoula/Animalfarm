@@ -1,0 +1,71 @@
+List of new features, bug fixes and improvements
+
+Version 1.0.0.20
+* Bugfix for crash at startup https://github.com/merryyellow/Unity-Code-Assist/issues/18
+
+Version 1.0.0.19
+* More logging for error tracking
+
+Version 1.0.0.18
+* Overall stability improvements, nullable references enabled for codebase
+* Stability improvements for communications, when reconnection occurs
+
+Version 1.0.0.17
+* Stability improvements for Unity ScriptFinder class
+
+Version 1.0.0.16
+* Bugfix for Visual Studio events concurrency
+
+Version 1.0.0.15
+* Visual Studio events are reimplemented for both stability and performance
+* Removal of possible Task deadlocks
+* Usability improvements for exporter/updater
+* Bugfix for exporter/updater, where prompts can appear twice
+* Bugfix for Inline Texts, where const null identifier may raise exceptions https://github.com/merryyellow/Unity-Code-Assist/issues/16
+* Bugfix for communications, where tags&layers are sent for the first time
+
+Version 1.0.0.14
+* Usability improvements for Visual Studio Status window where project is not a Unity project
+* Bugfix for communication reinitialization, where projects are closed and opened from Visual Studio https://github.com/merryyellow/Unity-Code-Assist/issues/15
+* Bugfix for Visual Studio events' initialization https://github.com/merryyellow/Unity-Code-Assist/issues/14
+
+Version 1.0.0.13
+* Bugfix for Unity where target object is neither Component nor MonoBehaviour https://github.com/merryyellow/Unity-Code-Assist/issues/13
+
+Version 1.0.0.12
+* New Feature: Updating Unity asset from Visual Studio
+* New Feature: Online error reporting of Unity errors
+* Usability improvement for Visual Studio Feedback window
+* Bugfix for Inline Texts where there is no class declaration https://github.com/merryyellow/Unity-Code-Assist/issues/5
+* Bugfix for Code Completion where there is no class declaration https://github.com/merryyellow/Unity-Code-Assist/issues/10
+* Bugfix for Visual Studio output window, where it may be unavailable
+
+Version 1.0.0.11
+* Bugfix for Visual Studio events' initialization https://github.com/merryyellow/Unity-Code-Assist/issues/3
+* Exporter now has more logs
+
+Version 1.0.0.10
+* Bugfix for Inline Texts where leading trivia is absent https://github.com/merryyellow/Unity-Code-Assist/issues/1
+* Bugfix for Visual Studio events' initialization https://github.com/merryyellow/Unity-Code-Assist/issues/2
+
+Version 1.0.0.9
+* Minor adjustments for initialization logging
+
+Version 1.0.0.8
+* Online analytics added
+* Bugfix for Inline Texts, Visual Studio code preview screen does not raise any exception anymore
+
+Version 1.0.0.7
+* Online error tracker added
+
+Version 1.0.0.6
+* Exporter is always disabled for non Unity projects
+
+Version 1.0.0.5
+* Lite version released at Visual Studio Marketplace
+* Exporting Unity asset from Visual Studio
+* Unity package become package independent (Removed Newtonsoft.Json dependency)
+
+Version 1.0.0
+* First release!
+* Released on Unity Asset Store

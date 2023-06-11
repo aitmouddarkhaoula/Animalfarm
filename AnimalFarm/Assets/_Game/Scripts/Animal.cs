@@ -3,17 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animal : MonoBehaviour {
-    
+public class Animal : MonoBehaviour { 
+
     public float speed = 5f;
+    public enum AnimalName { Cow, Sheap, Chicken };
+    public AnimalName name;
 
-
-    public void Init() {
+    public void Init()
+    {
+        
     }
 
-    private void Update() {
+    private void Update()
+    {
         transform.Translate(Vector2.left * (speed * Time.deltaTime));
     }
+  
 
-    
+
+
+
 }
