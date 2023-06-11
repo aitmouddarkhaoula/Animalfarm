@@ -1,29 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
-using _Game.Scripts;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class AnimalHome : MonoBehaviour {
-    public AnimalType animalType;
+//public enum HomeType
+//{
+//    Cow,
+//    Sheap,
+//    Chicken
+//};
+public class AnimalHome : MonoBehaviour
+{
+    public AnimalType selectedHome;
+    private Dropdown homeDropdown;
+    // Start is called before the first frame update
+    private void Start()
+    {
+        Init();
+    }
+    public void Init()
+    {
+        // Hook up the dropdown's value change event to a method
+        homeDropdown.onValueChanged.AddListener(OnAnimalDropdownValueChanged);
 
-    private void OnTriggerEnter2D(Collider2D col) {
-        if (!col.CompareTag("Player")) return;
-
-        if (col.GetComponent<Animal>().animalType == animalType)
-            OnCorrectAnimalTrigger();
-        else
-            OnWrongAnimalTrigger();
-
-        Destroy(col.gameObject);
+        // Set the default selected animal
+        selectedHome = AnimalType.Cow;
     }
 
-    private void OnWrongAnimalTrigger() {
-        ScoreSystem.Instance.RemoveScore(1);
-        print("Wrong Animal");
+    private void OnAnimalDropdownValueChanged(int index)
+    {
+        // Update the selected animal based on the dropdown value
+        selectedHome = (AnimalType)index;
     }
 
-    private void OnCorrectAnimalTrigger() {
-        ScoreSystem.Instance.AddScore(1);
-        print("Correct Animal");
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
