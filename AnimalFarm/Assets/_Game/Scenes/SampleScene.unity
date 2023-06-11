@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameSystems
       objectReference: {fileID: 0}
+    - target: {fileID: 9083338639919499735, guid: ec6b7ace5f8a7664197d4f81990a7a37, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec6b7ace5f8a7664197d4f81990a7a37, type: 3}
 --- !u!1001 &4846755020425958007
@@ -250,7 +254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4984525619191377289, guid: 7e1a0c3da1b39c445afc5a9d9fb8bf67, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4984525619191377293, guid: 7e1a0c3da1b39c445afc5a9d9fb8bf67, type: 3}
       propertyPath: m_Pivot.x
