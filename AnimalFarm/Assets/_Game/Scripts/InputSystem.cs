@@ -12,11 +12,7 @@ public class InputSystem : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-       
-
-    }
+    void Update() { }
     //void OnMouseDown()
     //{
     //    initialPostion = transform.position;
