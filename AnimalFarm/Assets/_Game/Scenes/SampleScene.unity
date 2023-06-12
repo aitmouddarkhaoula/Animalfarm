@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4432401445143454721, guid: 42d7ac58e0e98764789f00804ecc1e04, type: 3}
+      propertyPath: m_Size.y
+      value: 0.37447122
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432401445143454721, guid: 42d7ac58e0e98764789f00804ecc1e04, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.05276437
+      objectReference: {fileID: 0}
     - target: {fileID: 4846755021655448092, guid: 42d7ac58e0e98764789f00804ecc1e04, type: 3}
       propertyPath: m_RootOrder
       value: 3
