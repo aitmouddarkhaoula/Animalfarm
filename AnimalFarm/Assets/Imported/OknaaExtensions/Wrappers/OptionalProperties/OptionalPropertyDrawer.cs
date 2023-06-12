@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using OknaaEXTENSIONS;
 using UnityEditor;
 using UnityEngine;
@@ -36,3 +37,4 @@ namespace OknaaEXTENSIONS.Wrappers.OptionalProperties {
         }
     }
 }
+#endif

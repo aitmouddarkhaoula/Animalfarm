@@ -11,33 +11,17 @@ public enum AnimalType {
 public class Animal : MonoBehaviour {
     public float speed = 5f;
     [SerializeField] float _duration = 2f;
-    public AnimalType selectedAnimal;
+    public AnimalType selectedAnimal = AnimalType.Cow;
     private Dropdown animalDropdown;
 
-    private void Start() => Init();
-
-    private void Init() {
-        // Hook up the dropdown's value change event to a method
-        animalDropdown.onValueChanged.AddListener(OnAnimalDropdownValueChanged);
-
-        // Set the default selected animal
-        selectedAnimal = AnimalType.Cow;
-    }
-
-    private void OnAnimalDropdownValueChanged(int index) {
-        // Update the selected animal based on the dropdown value
-        selectedAnimal = (AnimalType)index;
-    }
 
     private void Update() {
         transform.Translate(Vector2.left * (speed * Time.deltaTime));
     }
 
     public void ReachedHome(Vector3 housePos) {
-        //transform.position = housePos;
         transform.DOMove(housePos, _duration);
         transform.DOScale(Vector3.zero, _duration);
-        //Destroy(gameObject);
     }
 
     public void WrongHome() {
