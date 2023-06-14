@@ -15,6 +15,7 @@ public class AnimalHome : MonoBehaviour {
 
         // Set the default selected animal
         selectedHome = AnimalType.Cow;
+        Debug.Log(selectedHome);
     }
 
     private void OnAnimalDropdownValueChanged(int index) {
