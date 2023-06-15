@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d49cb61e1a403aac0b9c4ed98f9adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
   score: 0
 --- !u!114 &6310750660237804903
 MonoBehaviour:
@@ -58,3 +59,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c772fe642822d6a468b5dcc26b4b1609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIManager: {fileID: 0}
+  score: {fileID: 23998027}
+  animal: {fileID: 0}

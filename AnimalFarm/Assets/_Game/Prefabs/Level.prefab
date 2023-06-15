@@ -26175,6 +26175,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Houses_Pig
       objectReference: {fileID: 0}
+    - target: {fileID: 8704376123817375189, guid: c4d27b28de7e4f4429c4fc107f66deb8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.37447122
+      objectReference: {fileID: 0}
+    - target: {fileID: 8704376123817375189, guid: c4d27b28de7e4f4429c4fc107f66deb8, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.05276437
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4d27b28de7e4f4429c4fc107f66deb8, type: 3}
 --- !u!4 &5494437696261382763 stripped
