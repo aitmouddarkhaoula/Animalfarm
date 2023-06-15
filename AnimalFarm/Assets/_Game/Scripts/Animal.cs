@@ -20,37 +20,28 @@ public class Animal : MonoBehaviour {
     }
 
     public void ReachedHome(Vector3 housePos) {
-
-        //transform.position = housePos;
         GameStateManager.instance.score.AddScore(2);
         transform.DOMove(housePos, _duration);
         transform.DOScale(Vector3.zero, _duration);
-        StartCoroutine(Destroy());
-        IEnumerator Destroy()
-        {
-            yield return new WaitForSeconds(2f);
-            OnDestroy();
-        }
-        //Destroy(gameObject);
+        Invoke(nameof(Destroy), 2);
+
+       
     }
+
+    private void Destroy() => Destroy(gameObject);
     
-    public void WrongHome()
-    {
-        GameStateManager.instance.score.RemoveScore(-2);
-        transform.DOShakePosition(1, 0.4f,10);
+    
+
+    public void WrongHome() {
+        GameStateManager.instance.score.RemoveScore(1);
+        transform.DOShakePosition(1, 0.4f, 10);
     }
-    public void Reset()
-    {
+
+    public void Reset() {
         Vector3 pos = transform.position;
         transform.position = pos;
     }
-    public void OnDestroy()
-    {
-        Destroy(gameObject);
+
+    public void OnDestroy() {
     }
-
-
-
-
-
 }

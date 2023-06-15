@@ -1,17 +1,17 @@
 using _Game.Scripts;
 using UnityEngine;
 
-public class GameStateManager : MonoBehaviour
-{
+public class GameStateManager : MonoBehaviour {
     public static GameStateManager instance;
+
     // Define different game states
-    public enum GameState
-    {
+    public enum GameState {
         MainMenu,
         Gameplay,
         PauseMenu,
         GameOver
     }
+
     [SerializeField] public UISystem UIManager;
     [SerializeField] public ScoreSystem score;
     [SerializeField] public AnimalsSpawner animal;
@@ -19,11 +19,9 @@ public class GameStateManager : MonoBehaviour
     // Current game state
     private GameState currentState;
 
-    private void Awake()
-    {
+    private void Awake() {
         // Ensure only one instance exists
-        if (instance != null && instance != this)
-        {
+        if (instance != null && instance != this) {
             Destroy(this.gameObject);
             return;
         }
@@ -32,14 +30,12 @@ public class GameStateManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    private void Start()
-    {
+    private void Start() {
         // Set initial game state
         SetGameState(GameState.MainMenu);
     }
 
-    private void Update()
-    {
+    private void Update() {
         //// Check for input or conditions to change game state
 
         //if (Input.GetKeyDown(KeyCode.Space))
@@ -67,8 +63,7 @@ public class GameStateManager : MonoBehaviour
         //}
     }
 
-    public void SetGameState(GameState newState)
-    {
+    public void SetGameState(GameState newState) {
         // Exit the current state
         ExitState(currentState);
 
@@ -79,12 +74,10 @@ public class GameStateManager : MonoBehaviour
         EnterState(currentState);
     }
 
-    private void EnterState(GameState state)
-    {
+    private void EnterState(GameState state) {
         // Perform actions when entering a state
 
-        switch (state)
-        {
+        switch (state) {
             case GameState.MainMenu:
 
                 Debug.Log("Entered Main Menu state");
@@ -98,7 +91,7 @@ public class GameStateManager : MonoBehaviour
                 break;
             case GameState.PauseMenu:
                 Debug.Log("Entered Pause Menu state");
-                
+
                 // Pause gameplay, show pause menu UI, etc.
                 break;
             case GameState.GameOver:
@@ -110,12 +103,10 @@ public class GameStateManager : MonoBehaviour
         }
     }
 
-    public void ExitState(GameState state)
-    {
+    public void ExitState(GameState state) {
         // Perform actions when exiting a state
 
-        switch (state)
-        {
+        switch (state) {
             case GameState.MainMenu:
                 // Hide main menu UI, clean up game settings, etc.
                 break;
