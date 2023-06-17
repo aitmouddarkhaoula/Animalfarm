@@ -31,7 +31,6 @@ public class Animal : MonoBehaviour {
     private void Destroy() => Destroy(gameObject);
     
     
-
     public void WrongHome() {
         GameStateManager.instance.score.RemoveScore(1);
         transform.DOShakePosition(1, 0.4f, 10);

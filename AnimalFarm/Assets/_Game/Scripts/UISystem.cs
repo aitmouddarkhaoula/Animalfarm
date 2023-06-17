@@ -1,52 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
+using OknaaEXTENSIONS.CustomWrappers;
 using UnityEngine;
 using static GameStateManager;
 
-public class UISystem : MonoBehaviour
-{
-    [SerializeField] GameObject MainMenuWindow;
-    [SerializeField] GameObject GamePlayWindow;
-    [SerializeField] GameObject GameOverWindow;
+public class UISystem : Singleton<UISystem> {
+    [SerializeField] private GameObject MainMenuWindow;
+    [SerializeField] private GameObject GamePlayWindow;
+    [SerializeField] private GameObject GameOverWindow;
 
-    public static UISystem UIManager;
-    // Start is called before the first frame update
-    void Start()
-    {
+    private void Start() {
         ShowMainMenuWindow();
-       
-            
     }
-    public void ShowMainMenuWindow()
-    {
+
+    public void ShowMainMenuWindow() {
         MainMenuWindow.gameObject.SetActive(true);
         GamePlayWindow.gameObject.SetActive(false);
         GameOverWindow.gameObject.SetActive(false);
     }
-    public void ShowGamePlayingWindow()
-    {
+
+    public void ShowGamePlayingWindow() {
         MainMenuWindow.gameObject.SetActive(false);
         GamePlayWindow.gameObject.SetActive(true);
         GameOverWindow.gameObject.SetActive(false);
     }
-    public void ShowGameOverWindow()
-    {
+
+    public void ShowGameOverWindow() {
         MainMenuWindow.gameObject.SetActive(false);
         GamePlayWindow.gameObject.SetActive(false);
         GameOverWindow.gameObject.SetActive(true);
     }
-    public void PlayGame()
-    {
+
+    public void PlayGame() {
         GameStateManager.instance.SetGameState(GameState.Gameplay);
     }
-    public void RestartGame()
-    {
-        GameStateManager.instance.SetGameState(GameState.MainMenu);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void RestartGame() {
+        GameStateManager.instance.SetGameState(GameState.MainMenu);
     }
 }

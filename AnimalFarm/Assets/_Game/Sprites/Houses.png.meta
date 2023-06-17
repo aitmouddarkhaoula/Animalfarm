@@ -159,10 +159,31 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Houses_Pig
+      name: Houses_Pig1
       rect:
         serializedVersion: 2
         x: 64
+        y: 80
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c1a5b4c342e7346aa8191fc4400384
+      internalID: 499161274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houses_Pig2
+      rect:
+        serializedVersion: 2
+        x: 96
         y: 80
         width: 32
         height: 48
@@ -173,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48c1a5b4c342e7346aa8191fc4400384
-      internalID: 499161274
+      spriteID: 7b06f958029e550488ab446670505f52
+      internalID: 1837918012
       vertices: []
       indices: 
       edges: []
@@ -191,8 +212,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Houses_Chicken: -423486257
-      Houses_Pig: 499161274
+      Houses_Pig1: 499161274
       Houses_Cow: -2098314523
+      Houses_Pig2: 1837918012
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

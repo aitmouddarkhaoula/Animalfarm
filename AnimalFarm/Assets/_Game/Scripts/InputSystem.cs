@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputSystem : MonoBehaviour
-{
+public class InputSystem : MonoBehaviour {
     bool reachedHome;
+
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         reachedHome = false;
     }
 
@@ -18,65 +17,51 @@ public class InputSystem : MonoBehaviour
     //    initialPostion = transform.position;
 
     //}
-    private void OnMouseDrag()
-    {
-        
+    private void OnMouseDrag() {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(mousePosition.x, mousePosition.y, 0f);
     }
-    private void OnMouseExit()
-    {
+
+    private void OnMouseExit() {
         if (reachedHome) return;
         Vector3 pos = transform.position;
-        if (pos.y > 2)
-        {
-            transform.position = new Vector3(pos.x, 2,0f);
-
+        if (pos.y > 2) {
+            transform.position = new Vector3(pos.x, 2, 0f);
         }
-        else if(pos.y < -2)
-        {
+        else if (pos.y < -2) {
             transform.position = new Vector3(pos.x, -2, 0f);
         }
         //else
         //{
         //    transform.position = pos;
         //}
-        
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Home"))
-        {
-            
+    // todo: Check this
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.CompareTag("Home")) {
             AnimalType animalSelected = GetComponentInParent<Animal>().selectedAnimal;
             AnimalType home = collision.GetComponent<AnimalHome>().selectedHome;
-            if(animalSelected == home)
-            {
+            if (animalSelected == home) {
                 reachedHome = true;
                 GetComponentInParent<Animal>().ReachedHome(collision.GetComponent<AnimalHome>().transform.position);
             }
-            else
-            {
+            else {
                 reachedHome = false;
                 StartCoroutine(RedColor());
                 //GetComponent<SpriteRenderer>().color = Color.red;
                 GetComponentInParent<Animal>().WrongHome();
             }
-
         }
         //else
         //{
         //    GetComponent<SpriteRenderer>().color = Color.white;
         //}
-
     }
-    IEnumerator RedColor()
-    {
+
+    IEnumerator RedColor() {
         GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(1f);
         GetComponent<SpriteRenderer>().color = Color.white;
     }
-
-
 }
