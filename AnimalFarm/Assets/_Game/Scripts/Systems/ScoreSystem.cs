@@ -20,9 +20,11 @@ namespace _Game.Scripts {
         
         public void AddScore(int amount) {
             score += amount;
+            PlayerPrefs.SetInt("score",score);
             if (score > highScore) {
                 highScore = score;
                 highScoreText.text = "" + highScore;
+                PlayerPrefs.SetInt("highScore",highScore);
             }
             
             scoreText.text = "" + score;
@@ -31,6 +33,7 @@ namespace _Game.Scripts {
         
         public void RemoveScore(int amount) {
             score -= amount;
+            PlayerPrefs.SetInt("score",score);
             if (score < 0) score = 0;
             
             scoreText.text = "" + score ;
@@ -38,11 +41,11 @@ namespace _Game.Scripts {
         }
         
         public void ResetScore() {
-            score = 0;
-            highScore = 0;
-            scoreText.text = "";
-            scoreText2.text = "";
-            highScoreText.text = "";
+            score = PlayerPrefs.GetInt("score", 0);
+            highScore =PlayerPrefs.GetInt("highScore", 0);
+            scoreText.text = score+"";
+            highScoreText.text = highScore+"";
+            scoreText2.text = 0+"";
         }
         
         
