@@ -30,5 +30,6 @@ public class AnimalsSpawner : MonoBehaviour {
         foreach (var animal in spawnedAnimals) {
             Destroy(animal);
         }
+        spawnedAnimals.Clear();
     }
 }
