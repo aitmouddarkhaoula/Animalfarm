@@ -4,6 +4,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class AnimalsSpawner : MonoBehaviour {
+    public List<GameObject> spawnedAnimals;
     public List<Transform> spawnPoints = new List<Transform>();
     public List<Transform> animalPrefabs = new List<Transform>();
 
@@ -17,11 +18,17 @@ public class AnimalsSpawner : MonoBehaviour {
 
     private void SpawnAnimals() {
         var randomIndex = Random.Range(0, spawnPoints.Count);
-        Instantiate(animalPrefabs.Random(), spawnPoints[randomIndex].position, Quaternion.identity);
+        Transform animal = Instantiate(animalPrefabs.Random(), spawnPoints[randomIndex].position, Quaternion.identity);
+        spawnedAnimals.Add(animal.gameObject);
     }
     public void Reset()
     {
         CancelInvoke();
-        
+        DestroyAllAnimals();
+    }
+    public void DestroyAllAnimals() {
+        foreach (var animal in spawnedAnimals) {
+            Destroy(animal);
+        }
     }
 }

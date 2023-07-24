@@ -297,6 +297,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 76394714431446719, guid: 7e1a0c3da1b39c445afc5a9d9fb8bf67, type: 3}
+      propertyPath: m_Color.a
+      value: 0.3137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 76394714431446719, guid: 7e1a0c3da1b39c445afc5a9d9fb8bf67, type: 3}
+      propertyPath: m_Color.b
+      value: 0.23529413
+      objectReference: {fileID: 0}
+    - target: {fileID: 76394714431446719, guid: 7e1a0c3da1b39c445afc5a9d9fb8bf67, type: 3}
+      propertyPath: m_Color.g
+      value: 0.23529413
+      objectReference: {fileID: 0}
+    - target: {fileID: 76394714431446719, guid: 7e1a0c3da1b39c445afc5a9d9fb8bf67, type: 3}
+      propertyPath: m_Color.r
+      value: 0.23529413
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383044351874052544, guid: 7e1a0c3da1b39c445afc5a9d9fb8bf67, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663970966025825942, guid: 7e1a0c3da1b39c445afc5a9d9fb8bf67, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4984525619191377289, guid: 7e1a0c3da1b39c445afc5a9d9fb8bf67, type: 3}
       propertyPath: m_Name
       value: UICanvas
