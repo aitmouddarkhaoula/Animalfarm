@@ -25,11 +25,8 @@ public class InputSystem : MonoBehaviour {
     private void OnMouseExit() {
         if (reachedHome) return;
         Vector3 pos = transform.position;
-        if (pos.y > 2) {
-            transform.position = new Vector3(pos.x, 2, 0f);
-        }
-        else if (pos.y < -2) {
-            transform.position = new Vector3(pos.x, -2, 0f);
+        if (pos.y > 2 ||pos.y < -2) {
+            transform.position = new Vector3(pos.x, Random.Range(-1f,1f), 0f);
         }
         //else
         //{

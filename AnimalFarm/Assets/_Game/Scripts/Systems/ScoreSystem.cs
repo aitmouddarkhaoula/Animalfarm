@@ -1,4 +1,5 @@
 ﻿using System;
+using DG.Tweening;
 using OknaaEXTENSIONS.CustomWrappers;
 using TMPro;
 using UnityEngine;
@@ -23,12 +24,15 @@ namespace _Game.Scripts {
             PlayerPrefs.SetInt("score",score);
             if (score > highScore) {
                 highScore = score;
-                highScoreText.text = "" + highScore;
                 PlayerPrefs.SetInt("highScore",highScore);
+                highScoreText.text = "" + highScore;
             }
             
             scoreText.text = "" + score;
-            scoreText2.text = "" + score;
+            scoreText2.text = "Your Score: " + score;
+            scoreText.transform.DOScale(1.5f, 0.1f).OnComplete(() => {
+                scoreText.transform.DOScale(1f, 0.1f);
+            });
         }
         
         public void RemoveScore(int amount) {
@@ -37,7 +41,7 @@ namespace _Game.Scripts {
             if (score < 0) score = 0;
             
             scoreText.text = "" + score ;
-            scoreText2.text = "" + score;
+            scoreText2.text = "Your Score: " + score;
         }
         
         public void ResetScore() {
@@ -45,7 +49,7 @@ namespace _Game.Scripts {
             highScore =PlayerPrefs.GetInt("highScore", 0);
             scoreText.text = score+"";
             highScoreText.text = highScore+"";
-            scoreText2.text = 0+"";
+            scoreText2.text = "Your Score: "+score;
         }
         
         
